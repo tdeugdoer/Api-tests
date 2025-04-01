@@ -26,6 +26,12 @@ public class Specifications {
 
     @UtilityClass
     public class Request {
+        public RequestSpecification requestSpec(String url) {
+            return new RequestSpecBuilder()
+                    .setBaseUri(url)
+                    .build();
+        }
+
         public RequestSpecification requestSpec(String url, ContentType contentType) {
             return new RequestSpecBuilder()
                     .setBaseUri(url)
